@@ -12,16 +12,16 @@
 
 function calculateDiscount(redemption) {
   let discount;
-  if (redemption > 0 && redemption <= 350){
+  if (redemption > 0 && redemption <= 350) {
     discount = "0%";
   }
-  if (redemption > 350  && redemption <= 1350){
+  if (redemption > 350 && redemption <= 1350) {
     discount = "15%";
   }
-  if (redemption > 1350  && redemption <= 2700){
+  if (redemption > 1350 && redemption <= 2700) {
     discount = "30%";
   }
-  if (redemption > 2700  && redemption <= 6500){
+  if (redemption > 2700 && redemption <= 6500) {
     discount = "45%";
   }
   //PLACE YOUR CODE HERE
@@ -35,24 +35,25 @@ function calculateDiscount(redemption) {
 {
   const i = 10; //10! = 3628800
   let fact1 = 1;
-  let fact2 = 1;
-  let fact3 = 1;
-  for (let i = 1; i <=10; i++){
-        fact1*=i;
+  for (let i1 = 1; i1 <= 10; i1++) {
+    fact1 *= i1;
   }
   console.log(fact1);
   let i2 = 1;
-  while (i2<=10){
-    fact2*=i2;
+  let fact2 = 1;
+
+  while (i2 <= 10) {
+    fact2 *= i2;
     i2++;
   }
   console.log(fact2);
   let i3 = 1;
+  let fact3 = 1;
   do {
-    fact3*=i3;
+    fact3 *= i3;
     i3++;
   }
-  while (i3<11)
+  while (i3 < 11)
   console.log(fact3);
 }
 
@@ -61,7 +62,12 @@ function calculateDiscount(redemption) {
  */
 {
   const substr = ["I", " love", " JS"];
-  console.log(substr[0]+substr[1]+substr[2]);
+  //console.log(substr[0]+substr[1]+substr[2]);
+  let str = "";
+  for (let i of substr) {
+    str += i;
+  }
+  console.log(str);
 }
 
 /**
@@ -74,14 +80,17 @@ function calculateDiscount(redemption) {
     interestOnDeposit: 250,
     otherExpences: -300
   };
-    const values = Object.values(personIncomes);
-    console.log(values);
-    sum = 0;
-     for (let i = 0; i < values.length; i++)
-     {
-          sum +=values[i];
-      }
-      console.log (sum);
+  const values = Object.values(personIncomes);
+  //console.log(values);
+  sum = 0;
+  //for (let i = 0; i < values.length; i++)
+  // {
+  //     sum +=values[i];
+  // }
+  for (let value of values) {
+    sum += value;
+  }
+  console.log(sum);
 }
 
 console.log(calculateDiscount(3100));
