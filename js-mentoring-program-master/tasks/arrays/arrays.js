@@ -5,10 +5,7 @@
  */
 function getCharactersNames(chars) {
     let arr = [];
-    for (let i in chars){
-        arr.push(chars[i].name);
-    }
-    console.log (arr);
+    arr = chars.map(el => el.name);
     return arr;
 }
 
@@ -17,10 +14,7 @@ function getCharactersNames(chars) {
  * @param {Array} chars
  */
 function printCharacterNames(chars) {
-    for (let i in chars){
-        console.log(chars[i].name);
-    }
-
+    chars.forEach(el => console.log(el.name));
 }
 
 /**
@@ -30,11 +24,7 @@ function printCharacterNames(chars) {
  */
 function getNonHumanCharacters(chars) {
     let arr = [];
-    for (let i in chars){
-        if (chars[i].species !== "Human") {
-            arr.push(chars[i]);
-        }
-    }
+    arr = chars.filter(el=> el.species !=="Human");
     return arr;
 }
 
@@ -44,6 +34,7 @@ function getNonHumanCharacters(chars) {
  * @return {Object} - Jerry object
  */
 function getJerryInfo(chars) {
+
     for (let i in chars){
         if (chars[i].name === "Jerry Smith")
         return chars[i];
@@ -56,11 +47,7 @@ function getJerryInfo(chars) {
  * @return {boolean}
  */
 function isAllHuman(chars) {
-    for ( let i in chars) {
-        if (chars[i].species !== "Human")
-        return false;
-    }
-    return true;
+    return chars.every(el => el.species === "Human");
 }
 
 /**
@@ -69,12 +56,7 @@ function isAllHuman(chars) {
  * @return {boolean}
  */
 function isAnyFishPerson(chars) {
-    for ( let i in chars) {
-
-        if (chars[i].type === "Fish-Person")
-        return true;
-    }
-    return false;
+    return chars.some(el => el.type === "Fish-Person");
 }
 
 /**
