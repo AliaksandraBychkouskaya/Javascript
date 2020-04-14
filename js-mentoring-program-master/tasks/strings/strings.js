@@ -68,7 +68,8 @@ console.log(truncateString ("My name is Alex", 10));
  * console.log(replace10("231054")) // 23ten54
  */
 function replace10(text) {
-  return text.replace("10","ten");
+  const regex = /"10"/g;
+  return text.replace(regex,"ten");
 }
 console.log(replace10 ("31054"));
 /**

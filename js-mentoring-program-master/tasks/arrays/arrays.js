@@ -92,7 +92,7 @@ function minItem(arr) {
             min = arr [i];
         }
     }
-    return minindex;
+    return Number(minindex);
 }
 
 module.exports = {
