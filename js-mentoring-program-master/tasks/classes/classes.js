@@ -35,7 +35,7 @@ class Student extends Person{
  //create instance of class person
 //const student = //create instance of class student
 let person = new Person("Artsiom", "Peshko");
-let student = new Student (person, "11");
+let student = new Student ("Fori","Glupova", "11");
 
 module.exports = {
     person,
