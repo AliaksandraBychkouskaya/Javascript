@@ -24,8 +24,8 @@ class Person{
  */
 //put your code here
 class Student extends Person{
-    constructor (person,grade){
-        super(person);
+    constructor (firstName,lastName,grade){
+        super(firstName,lastName);
         this.grade = grade;
     }
     getGrade (){
