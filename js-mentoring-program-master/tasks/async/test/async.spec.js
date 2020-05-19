@@ -34,7 +34,9 @@ describe('promise', () => {
     });
 
     it('should handle error', () => {
-        expect(handlePromiseError).to.throw('Error');
+        return handlePromiseError().catch(err => {
+            expect(err.message).to.equal('Error');
+        });
     });
 });
 
